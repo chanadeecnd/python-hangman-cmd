@@ -1,68 +1,12 @@
 import random
-HANGMAN = '''
-88                                                                            
-88                                                                            
-88                                                                            
-88,dPPYba,  ,adPPYYba, 8b,dPPYba,   ,adPPYb,d8 88,dPYba,,adPYba,  ,adPPYYba,  
-88P'    "8a ""     `Y8 88P'   `"8a a8"    `Y88 88P'   "88"    "8a ""     `Y8  
-88       88 ,adPPPPP88 88       88 8b       88 88      88      88 ,adPPPPP88  
-88       88 88,    ,88 88       88 "8a,   ,d88 88      88      88 88,    ,88  
-88       88 `"8bbdP"Y8 88       88  `"YbbdP"Y8 88      88      88 `"8bbdP"Y8  
-                                    aa,    ,88                                
-                                     "Y8bbdP"
-'''
-STATE = ['''
-  +---+
-  |   |
-      |
-      |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
-      |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
-  |   |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
- /|   |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
- /    |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
- / \  |
-      |
-=========''']
+import hangman_art
+import hangman_word
+
+HANGMAN = hangman_art.HANGMAN
+STATE = hangman_art.STATE
+
 print(HANGMAN)
-word_list = ["ardvark", "baboon", "camel"]
+word_list = hangman_word.words
 random_word = random.choice(word_list)
 chosen_word = str(random_word)
 print(random_word)
